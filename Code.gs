@@ -131,7 +131,7 @@ function readForm(range) {
         givenName: firstName[i],
         familyName: lastName[i]
       },
-      password: "jerseystem",
+      password: "XXXX",
       //changePasswordAtNextLogin: "True"
     };
   
@@ -187,7 +187,7 @@ function createClass(students, class) {
     
   course.name = class;
   //need to change owner's email address to teacher@jerseystem.org
-  course.ownerId = "hye-yoon.jeon@jerseystem.org";
+  course.ownerId = "XXXX@jerseystem.org";
   course = Classroom.Courses.create(course);
   
   //create students invite students to class
