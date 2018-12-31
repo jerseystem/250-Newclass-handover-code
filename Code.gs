@@ -341,7 +341,7 @@ function createGroupme(parentEmail, class) {
                   method: "POST",
                   payload: JSON.stringify(data), 
                   contentType: "application/json"};
-    var group = UrlFetchApp.fetch('https://api.groupme.com/v3/groups?token=929c15505df2013607277bc1a17f51cf', params);
+    var group = UrlFetchApp.fetch('https://api.groupme.com/v3/groups?token=XXXXXXXX', params);
   } 
   catch (err) {
     Logger.log("Error: " + err);
@@ -362,7 +362,7 @@ function createGroupme(parentEmail, class) {
                   method: "POST",
                   payload: JSON.stringify(members), 
                   contentType: "application/json"};
-        var group = UrlFetchApp.fetch('https://api.groupme.com/v3/groups/' + groupId + '/members/add?token=929c15505df2013607277bc1a17f51cf', params);
+        var group = UrlFetchApp.fetch('https://api.groupme.com/v3/groups/' + groupId + '/members/add?token=XXXXX', params);
   }
   catch (err) {
     Logger.log("Error adding members to Groupme." + err);
@@ -375,7 +375,7 @@ function createRemind() {
 
 function sendParentsEmail(parentEmail) {
   var subject = "Welcome Email For Parents";
-  var doc = DocumentApp.openByUrl("https://docs.google.com/document/d/19KvpJPkmwqC7N7thwhWz0dQNFBoCRE9YZ5atMXf7x9I/edit");
+  var doc = DocumentApp.openByUrl("https://docs.google.com/document/d/XXXXX/edit");
   var content = doc.getBody().getText();
   for (var i=0; i < parentEmail.length; i++) {
     var address = parentEmail[i];
